@@ -1,146 +1,175 @@
-🚀 SmellControl: Revolutionizing Odor Detection with AI and IBM Watsonx
-🌐 Project Overview
-We are currently witnessing a technological renaissance. Machines today can see, hear, touch, and even learn. But there remains one critical human sense they cannot emulate: the sense of smell. This missing sensory dimension represents a major gap in machine perception, especially in industries where chemical, biological, or environmental threats must be detected proactively. To address this challenge, our team, Astrosit, developed SmellControl, a cutting-edge AI-integrated odor detection platform that leverages nanohybrid sensor technology and is fully integrated with IBM Watsonx.ai and IBM Cloud.
+# 🧠 SmellControl: Bringing the Power of Smell to Machines with IBM Watsonx
 
-🔬 Technological Foundations
-SmellControl is built upon a 64-channel nanohybrid gas sensor array, which mimics the human olfactory system by reacting to molecular compounds and converting these chemical interactions into unique digital signal patterns. The core sensing unit, Smell iX16, is capable of detecting gas concentrations in the parts-per-billion (ppb) range, offering sensitivity up to 100 times greater than traditional sensors.
+![SmellControl Logo](./images/smellcontrol_logo.png) <!-- Görsel: Logo -->
 
-The sensor array records changes in resistance across 64 independent channels every 1.8 seconds, producing over 6,000 signal data points per gas event during a 5-hour observation cycle. These signals are classified using advanced machine learning models, ensuring high-resolution real-time odor profiling.
+## 1. 🌍 Introduction: The Missing Sense in Machine Intelligence
 
-Key specifications:
+In today’s AI-driven world, machines can **see, hear, touch**, and **learn**—but they **still cannot smell**. This missing sense limits breakthroughs in fields like:
 
-Sensor type: Nanohybrid-based gas detection (Smell iX16)
+- 🌿 Environmental Monitoring  
+- 🏭 Industrial Safety  
+- 🧬 Public Health  
+- 🌾 Agriculture  
+- 🚀 Space Exploration  
 
-Total channels: 64 (4 × Smell iX16 chips)
+**SmellControl**, developed by **Astrosit** for the **IBM Watsonx Hackathon 2025**, is an **AI-powered**, **real-time toxic gas and odor detection system** using **nanohybrid sensors**, **advanced signal processing**, and **IBM Watsonx Cloud AI tools**.
 
-Data acquisition rate: 1.8 sec/sample
+---
 
-Weight: ~3.7 grams (fully portable)
+## 2. 🧪 The Technological Problem: Why Machines Must Smell
 
-Power consumption: ~1 µW (ultra-low power)
+According to WHO:
 
-Data collected: Tens of thousands of structured signal patterns
+- ⚠️ 7+ million premature deaths annually from air pollution  
+- 💸 $80B+ in yearly economic losses due to industrial gas leaks  
+- 🌫️ 15% of global carbon emissions stem from gas emissions  
 
-Accuracy: ~98% classification success using K-NN model
+SmellControl offers **proactive odor detection**, transforming how we **protect health, safety, and the environment**.
 
-Output: Digitized odor pattern mapped to AI-driven odor profiles
+---
 
-🧠 AI Models & Data Pipeline
-The system utilizes a modular data pipeline consisting of:
+## 3. 🔬 Hardware Innovation: Smell iX16 + 64-Channel Sensor Architecture
 
-Real-time data acquisition from the 64-channel sensor
+![Hardware Architecture](./images/hardware_architecture.png) <!-- Görsel: Devre/sensör şeması -->
 
-Noise filtering and normalization via statistical preprocessing
+At the core of SmellControl is our **nanohybrid sensor array** powered by:
 
-Pattern recognition via supervised learning models
+- **4 × Smell iX16 chips**  
+- **64 total sensor channels**  
+- **Sub-ppb sensitivity**  
+- **Sampling every 1.8 seconds**  
+- **3.7g device weight, 1µW power consumption**
 
-Cloud-based classification and logging
+Each odor leaves a **unique resistive fingerprint** transformed into a **digital smell signature**.
 
-During development, we benchmarked several machine learning algorithms on the dataset, including:
+---
 
-K-Nearest Neighbors (K-NN)
+## 4. 🧠 Signal Processing & Machine Learning Workflow
 
-Decision Trees
+### 🔁 4.1 Signal Processing Pipeline
 
-Gradient Boosting Machines
+1. **Raw Signal Acquisition**  
+2. **Noise Filtering**: Kalman, Butterworth, Moving Average  
+3. **Normalization**: `StandardScaler`  
+4. **Feature Extraction**: mean, variance, entropy, skewness, kurtosis  
+5. **Dimensionality Reduction**: PCA + t-SNE
 
-Support Vector Machines (SVM)
+### 🤖 4.2 Model Training
 
-Logistic Regression
+We trained multiple models on labeled gas/VOC classes:
 
-AdaBoost
+- **K-NN**: 98% accuracy (F1-score: 0.97, Precision: 0.96, Recall: 0.98)  
+- Decision Tree, Random Forest, SVM, Logistic Regression, AdaBoost, Gradient Boost
 
-After comparative testing, K-NN emerged as the top performer with:
+All models evaluated with **cross-validation** & **ROC-AUC**.
 
-F1-score: 0.97
+---
 
-Precision: 0.96
+## 5. ☁️ IBM Watsonx & Cloud Integration
 
-Recall: 0.98
+### ⚙️ 5.1 Data Architecture
 
-These models are deployed using IBM Watsonx.ai, which enables scalable training, continuous monitoring, and real-time inference. Additionally, ModelArts pipelines were tested for scalable retraining and data labeling efficiency.
+- 📡 Sensor → MQTT → IBM Cloud  
+- 🧾 IBM Object Storage + DB2 Warehouse  
+- ⚡ IBM Cloud Functions trigger model updates  
+- 📊 Watsonx.ai Studio handles classification and analytics
 
-☁️ IBM Cloud & Watsonx Integration
-One of the project’s pivotal breakthroughs is its seamless integration with IBM Cloud and Watsonx.ai. Sensor outputs are streamed to IBM Cloud using MQTT protocols and stored within IBM Object Storage, which acts as a scalable and secure data lake for odor signal patterns.
+### 🔍 5.2 Watsonx Applications
 
-Within Watsonx, we established a Retrieval-Augmented Generation (RAG) pipeline tailored for odor classification and environmental risk prediction. The RAG system allows our model to cross-reference historical odor datasets, facilitating:
+- 🔴 Real-time odor classification  
+- 📚 RAG for referencing historical events  
+- ♻️ Model retraining pipeline  
+- 🧠 AutoAI integration
 
-Pattern-based anomaly detection
+---
 
-Time-series forecasting
+## 6. 🌐 Use Cases Across Industries
 
-Environmental impact assessment
+SmellControl can be deployed in **drones, wearables, handhelds, smart nodes**.
 
-Watsonx is not only used for prediction but also as a knowledge enrichment tool, allowing us to build a dynamic, evolving odor database. Just as the human brain refines its perception of scent through repeated exposure, Watsonx evolves and classifies each new odor with increasing accuracy.
+| Industry            | Application Examples                                    |
+|---------------------|---------------------------------------------------------|
+| 🌋 Disaster Relief   | Gas leaks after earthquakes, industrial spills         |
+| 🚜 Agriculture       | Fertilizer monitoring, soil health                     |
+| 🏥 Public Health     | Indoor air pollution detection                         |
+| 🌎 Environmental     | VOC, methane, ozone, NO₂ tracking                      |
+| 🛡️ Defense & Security| Chemical warfare agent detection                        |
+| 🏠 Smart Homes/IoT   | HVAC optimization, wearable gas monitors               |
 
-🌎 Climate Impact & Sustainability
-SmellControl is not just a technical project—it's an environmental mission. According to the World Health Organization (WHO), air pollution causes over 7 million premature deaths annually and leads to economic losses exceeding $80 billion due to industrial accidents, toxic exposure, and long-term health degradation.
+---
 
-Moreover, toxic emissions and gas leaks contribute up to 15% of global carbon emissions. By providing real-time detection of:
+## 7. 🌱 Environmental Impact & Climate Action
 
-Methane (CH₄)
+SmellControl supports sustainability:
 
-Nitrogen oxides (NOₓ)
+- 🧪 Tracks greenhouse gases (CH₄, CO₂, NOₓ)  
+- 🕵️ Early detection prevents emissions  
+- 📈 ESG & carbon reporting  
+- 🌍 Geolocated alerts
 
-Volatile organic compounds (VOCs)
+---
 
-Formaldehyde, ammonia, and more
+## 8. 🎯 UN Sustainable Development Goals (SDGs)
 
-...SmellControl acts as a first line of defense against environmental threats.
+SmellControl aligns with:
 
-This makes the technology particularly suited for:
+- **SDG 3** – Good Health and Well-being  
+- **SDG 9** – Industry, Innovation and Infrastructure  
+- **SDG 11** – Sustainable Cities and Communities  
+- **SDG 12** – Responsible Consumption and Production  
+- **SDG 13** – Climate Action  
+- **SDG 15** – Life on Land  
 
-Smart cities and sustainable urban planning
+---
 
-Carbon footprint monitoring in industry
+## 9. 📊 Market Size & Business Strategy
 
-Waste treatment and agricultural toxin detection
+### 🌐 Market Potential
 
-Indoor air quality assurance in residential and public buildings
+| Metric | Value |
+|--------|-------|
+| TAM    | $600B (Global) |
+| SAM    | $120B (Europe) |
+| SOM    | $9B (Turkey)   |
+| 5-Year Revenue | $510M–$850M (3–5% share) |
 
-By enabling automated odor recognition and AI-driven decision making, we empower stakeholders to act swiftly, reducing emissions, preventing disasters, and preserving public health.
+### 🧩 Business Models
 
-🧩 Use Case Scenarios
-Disaster Management: Detecting gas leaks during earthquakes or industrial failures
+- **B2B**: Factory integration  
+- **B2G**: Smart cities, air monitoring  
+- **B2C**: Personal gas monitors  
+- **Consulting**: AI smell analytics
 
-Environmental Monitoring: VOC sensing in agriculture and forestry
+---
 
-Military & Defense: Identifying biological and chemical warfare gases
+## 10. 🗓️ Project Timeline
 
-Healthcare: Smell-based diagnostics for neurological diseases
+| Phase                 | Timeline          |
+|-----------------------|------------------|
+| Prototype             | Q1–Q2 2025       |
+| IBM Hackathon Launch | Q2 2025          |
+| MVP Pilots           | Q3–Q4 2025       |
+| Large Deployment     | Q1 2026          |
+| Global Expansion     | Q3–Q4 2026       |
 
-IoT Devices: Smart homes, wearables, and mobile sniffers
+---
 
-📈 Market Viability
-The global gas detection market is valued at $600 billion, growing annually by ~7% CAGR. SmellControl targets 3–5% market share in the first five years, equating to $510–850 million in projected revenue.
+## 11. 🚀 Future Vision: From Hackathon to Global Impact
 
-We support the following business models:
+Winning the **IBM Watsonx Hackathon** would mark the start of:
 
-B2B: Direct device licensing to industrial sectors
+- 🌐 SmellControl U.S. launch @ IBM TechXchange 2025  
+- 🧠 Global odor dataset development  
+- 📦 SDK for third-party developers  
+- 🏙️ Smart city collaborations  
+- 🧭 Integrating smell into IoT (alongside camera, mic, GPS, and touch)
 
-B2G: Government integration for environmental and security monitoring
+SmellControl aims not just to **add a sensor**, but to **redefine machine perception**.
 
-B2C: Future consumer-grade odor devices for smart homes and health monitoring
+---
 
-Consultancy: Data-driven environmental consulting using our odor datasets
+## 🙌 Let's Help Machines Smell—and Help Humanity Breathe Easier
 
-🔗 Contribution to SDGs
-SmellControl is fully aligned with six UN Sustainable Development Goals (SDGs):
-
-SDG 3: Good Health and Well-being
-
-SDG 9: Industry, Innovation, and Infrastructure
-
-SDG 11: Sustainable Cities and Communities
-
-SDG 12: Responsible Consumption and Production
-
-SDG 13: Climate Action
-
-SDG 15: Life on Land
-
-🧠 Conclusion
-SmellControl represents a technological leap that brings machines one step closer to achieving full sensory integration. By incorporating AI-powered olfactory sensing into IBM’s cloud and machine learning stack, we are not just solving a technical problem—we are closing the sensory gap between man and machine.
-
-In an era of escalating climate crisis, urban toxicity, and industrial complexity, SmellControl is more than an innovation—it's a necessity.
+> **SmellControl** is how we teach machines to smell.  
+> In doing so, we help humanity live safer, cleaner, and smarter lives.
 
