@@ -250,6 +250,24 @@ Winning the **IBM Watsonx Hackathon 2025** 🏆 will allow us to:
 - Deploy city-wide **smart odor grids**
 
 ---
+---
+
+## 🎥 Project Videos
+
+### 🚀 Live Demo: See SmellControl in Action
+
+[![SmellControl Live Demo](https://img.youtube.com/vi/4zBSD9aGWag/0.jpg)](https://www.youtube.com/watch?v=4zBSD9aGWag)
+> 📽️ Click the image above to watch the **Live Demo** of SmellControl's real-time odor detection, signal processing, and IBM Watsonx integration.
+
+---
+
+### 🌐 Use Case Overview: Real-World Impact Across Industries
+
+[![SmellControl Use Cases](https://img.youtube.com/vi/CBQzz0k5XPM/0.jpg)](https://youtu.be/CBQzz0k5XPM)
+> 🌍 Explore how SmellControl is transforming industries—from agriculture to defense—in our **Use Case** showcase video.
+
+---
+
 
 
 
