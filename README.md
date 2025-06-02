@@ -250,6 +250,15 @@ Winning the **IBM Watsonx Hackathon 2025** 🏆 will allow us to:
 - Deploy city-wide **smart odor grids**
 
 ---
+## 📑 Project Presentation
+
+### 🎯 Want the Full Details?
+
+> Below is the complete **project presentation** for SmellControl, including design rationale, technical diagrams, and deployment strategies.
+
+📥 **[👉 Click here to download the presentation (PDF)](https://sendgb.com/wxXV7uFUYs6)**
+
+🕵️‍♂️ Dive deep into the tech behind the sensor, data pipeline, and IBM Watsonx integration. Perfect for judges, investors, and collaborators.
 ---
 
 ## 🎥 Project Videos
