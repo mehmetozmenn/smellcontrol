@@ -30,7 +30,10 @@ SmellControl offers **proactive odor detection**, transforming how we **protect 
 
 ## 3. 🔬 Hardware Innovation: Smell iX16 + 64-Channel Sensor Architecture
 
-![Hardware Architecture](./images/hardware_architecture.png) <!-- Görsel: Devre/sensör şeması -->
+![Hardware Architecture](./images/smellcontrol2.png)
+![Hardware Architecture](./images/smellcontrol3.png) 
+![Hardware Architecture](./images/smellcontrol4.png) 
+![Hardware Architecture](./images/smellcontrol5.jpg)  <!-- Görsel: Devre/sensör şeması -->
 
 At the core of SmellControl is our **nanohybrid sensor array** powered by:
 
