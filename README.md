@@ -251,18 +251,5 @@ Winning the **IBM Watsonx Hackathon 2025** 🏆 will allow us to:
 
 ---
 
-> **SmellControl doesn’t just detect smells—**  
-> it **transforms** them into **actionable insights** 🔍📊,  
-> empowering a **cleaner**, **safer**, and more **sustainable world** 🌍.
 
-![SmellControl Summary Image](./images/conclusion_banner.png) <!-- Görsel: Kapanış görseli önerisi -->
-
----
-
-
-
-## 🙌 Let's Help Machines Smell—and Help Humanity Breathe Easier
-
-> **SmellControl** is how we teach machines to smell.  
-> In doing so, we help humanity live safer, cleaner, and smarter lives.
 
