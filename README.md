@@ -1,6 +1,6 @@
 # 🧠 SmellControl: Bringing the Power of Smell to Machines with IBM Watsonx
 
-![SmellControl Logo](./images/smellcontrol_logo.png) <!-- Görsel: Logo -->
+![SmellControl Logo](./images/astrosit_logo.png) <!-- Görsel: Logo -->
 
 ## 1. 🌍 Introduction: The Missing Sense in Machine Intelligence
 
