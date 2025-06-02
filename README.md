@@ -67,7 +67,7 @@ All models evaluated with **cross-validation** & **ROC-AUC**.
 
 ## 5. ☁️ IBM Watsonx & Cloud Integration
 
-![SmellControl Logo](./images/smellcontrol1.png)
+![SmellControl Logo](./images/smellcontrol1.jpg)
 
 ### ⚙️ 5.1 Data Architecture
 
