@@ -57,6 +57,62 @@ Each odor leaves a **unique resistive fingerprint** transformed into a **digital
 4. **Feature Extraction**: mean, variance, entropy, skewness, kurtosis  
 5. **Dimensionality Reduction**: PCA + t-SNE
 
+#### 📡 Continued: Sensor Data Collection and Resolution
+
+SmellControl’s signal processing pipeline begins with the acquisition of rich, high-resolution sensor data.
+
+We use a **64-channel nanohybrid gas sensor array**, where each channel is coated with specialized nanomaterials that react uniquely to different gases. These chemical interactions are captured as resistance variations and digitized as numerical features.
+
+To enhance environmental awareness, we also integrate:
+
+- 🌡️ **Ambient Temperature**
+- 💧 **Humidity**
+
+Every **1.8 seconds**, the system captures:
+
+- `64 gas sensor readings (feature_1 to feature_64)`
+- `+ 2 environmental parameters (temperature, humidity)`
+- **= 66 total features per timestamp**
+
+This synchronized, high-frequency data stream enables the construction of **dynamic odor fingerprints**, supporting robust classification and anomaly detection.
+
+##### 🖼️ Sample Sensor Data Snapshot
+
+![Sample Sensor Data](./images/sample_dataset.jpg) <!-- Görsel buraya eklenecek -->
+
+> Each row in the dataset corresponds to a precise moment in time, forming the basis for accurate and contextual gas analysis.
+
+---
+
+#### ⏱ Why 1.8 Seconds?
+
+The **1.8-second sampling interval** is the result of empirical optimization, offering the best trade-off between:
+
+- ✅ Signal sensitivity  
+- 🔋 Energy efficiency  
+- ⚡ Real-time responsiveness
+
+Over a 5-hour measurement window, this frequency yields **6,000+ data points per gas event**, enabling:
+
+- 🧠 High-fidelity machine learning model training  
+- 📉 Noise-tolerant feature engineering  
+- 🌐 Scalable performance across hardware profiles
+
+---
+
+#### 🔄 Flexible Deployment Enabled by Data Architecture
+
+This structured data model supports deployment in a wide range of environments:
+
+- 🏭 Industrial automation  
+- 🌆 Urban pollution monitoring  
+- 🤖 Autonomous drones & mobile robots  
+- 🎒 Wearable safety devices  
+- 🛰️ Remote sensing platforms
+
+> The data resolution and structure make SmellControl not just a sensor—but an **intelligent, scalable environmental sensing solution**.
+
+
 ### 🤖 4.2 Model Training
 
 We trained multiple models on labeled gas/VOC classes:
